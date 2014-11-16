@@ -10,6 +10,6 @@ class KeySigQuestion(object):
     def givenKeyGiveAccidentals(self):
         q = "What's the key signature of " + self.itsKey.key[0] + "? "
         a = raw_input(q)
-        result = (a == self.itsKey.key[1])
+        result = (a == self.itsKey._text_answer())
         
         return result
