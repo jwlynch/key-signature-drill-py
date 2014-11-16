@@ -8,8 +8,8 @@ class KeySigQuestion(object):
         return self.givenKeyGiveAccidentals()
 
     def givenKeyGiveAccidentals(self):
-        q = "What's the key signature of " + self.itsKey.rand_key[0] + "? "
+        q = "What's the key signature of " + self.itsKey.key[0] + "? "
         a = raw_input(q)
-        result = (a == self.itsKey.rand_key[1])
+        result = (a == self.itsKey.key[1])
         
         return result
