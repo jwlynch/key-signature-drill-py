@@ -26,5 +26,27 @@ class TestKey(unittest.TestCase):
         for key_txt in key_txt_list:
             self.assertEqual(Key(key_txt[0])._text_answer(), key_txt[1])
 
+    def testAccidentals(self):
+        sharps = ['F#', 'C#', 'G#', 'D#', 'A#', 'E#', 'B#']
+        flats = ['Bb', 'Eb', 'Ab', 'Db', 'Gb', 'Cb', 'Fb']
+        sharp_keys = ['C#', 'F#', 'B', 'E', 'A', 'D', 'G']
+        flat_keys = ['Cb', 'Gb', 'Db', 'Ab', 'Eb', 'Bb', 'F']
+        
+        key_acc_list = []
+        
+        for i in range(1, 7):
+            key_acc_list.append([sharp_keys[i], sharps[:-i]])
+            key_acc_list.append([flat_keys[i], flats[:-i]])
+        
+        key_acc_list.append(['C#', sharps])
+        key_acc_list.append(['Cb', flats])
+        
+        key_acc_list.append(['C', []])
+        
+        print repr(key_acc_list)
+        
+        for key_acc in key_acc_list:
+            self.assertEqual(Key(key_acc[0]).accidentals(), key_acc[1])
+
 if __name__ == '__main__':
     unittest.main()
