@@ -45,7 +45,24 @@ class Key(object):
       return result
     
     def accidentals(self):
-        return [] # oass
+        num_accidentals = self.key[1][0]
+        key_type = self.key[1][1]
+        if num_accidentals == 0:
+            result = []
+        elif num_accidentals == 7:
+            if key_type.startswith("sharp"):
+                result = self.sharps
+            elif key_type.startswith("flat"):
+                result = self.flats
+        else:
+            last_acc_index = 7 - num_accidentals
+            
+            if key_type.startswith("sharp"):
+                result = self.sharps[:-last_acc_index]
+            elif key_type.startswith("flat"):
+                result = self.flats[:-last_acc_index]
+                
+        return result
      
     def __init__(self, aKey=None):
       if aKey is None:
