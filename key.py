@@ -43,6 +43,9 @@ class Key(object):
         result = str(theKey[0]) + " " + theKey[1]
       
       return result
+    
+    def accidentals(self):
+        return [] # oass
      
     def __init__(self, aKey=None):
       if aKey is None:
