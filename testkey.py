@@ -43,8 +43,6 @@ class TestKey(unittest.TestCase):
         
         key_acc_list.append(['C', []])
         
-        print repr(key_acc_list)
-        
         for key_acc in key_acc_list:
             self.assertEqual(Key(key_acc[0]).accidentals(), key_acc[1])
 
