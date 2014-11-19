@@ -9,6 +9,7 @@ class KeySigQuestion(object):
         choice = []
         choice.append(self.givenKeyGiveAccidentals)
         choice.append(self.givenSignatureGiveKey)
+        choice.append(self.givenAccidentalsGiveKey)
         return random.choice(choice)()
 
     def givenKeyGiveAccidentals(self):
