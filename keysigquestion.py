@@ -13,21 +13,21 @@ class KeySigQuestion(object):
 
     def givenKeyGiveAccidentals(self):
         q = "What's the key signature of " + self.itsKey.key[0] + "? "
-        a = raw_input(q)
+        a = raw_input(q).strip()
         result = (a == self.itsKey._text_answer())
         
         return result
     
     def givenSignatureGiveKey(self):
         q = "What key has " + self.itsKey._text_answer() + "? "
-        a = raw_input(q)
+        a = raw_input(q).strip()
         result = (a == self.itsKey.key[0])
         
         return result
 
     def givenAccidentalsGiveKey(self):
         q = "What key has " + self.itsKey.accidentals() + "? "
-        a = raw_input(q)
+        a = raw_input(q).strip()
         result = (a == self.itsKey.key[0])
         
         return result
