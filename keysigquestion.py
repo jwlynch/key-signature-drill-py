@@ -24,3 +24,10 @@ class KeySigQuestion(object):
         result = (a == self.itsKey.key[0])
         
         return result
+
+    def givenAccidentalsGiveKey(self):
+        q = "What key has " + self.itsKey.accidentals() + "? "
+        a = raw_input(q)
+        result = (a == self.itsKey.key[0])
+        
+        return result
