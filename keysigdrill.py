@@ -11,7 +11,7 @@ while lop:
         goodBool = q.ask()
     except KeyboardInterrupt:
         # maybe print stats here
-        break
+        lop = False
     finally:
         if goodBool:
             print "Right!"
