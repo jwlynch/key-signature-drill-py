@@ -27,7 +27,7 @@ class KeySigQuestion(object):
         return result
 
     def givenAccidentalsGiveKey(self):
-        q = "What key has " + self.itsKey.accidentals() + "? "
+        q = "What key has " + ", ".join(self.itsKey.accidentals()) + "? "
         a = raw_input(q).strip()
         result = (a == self.itsKey.key[0])
         
