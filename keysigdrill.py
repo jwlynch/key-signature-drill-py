@@ -5,6 +5,7 @@ from keysigquestion import KeySigQuestion
 lop = True
 
 while lop:
+    goodBool = False
     q = KeySigQuestion()
     
     try:
