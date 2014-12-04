@@ -14,7 +14,8 @@ while lop:
         # maybe print stats here
         lop = False
     finally:
-        if goodBool:
-            print "Right!"
-        else:
-            print "Wrong!"
+        if lop:
+            if goodBool:
+                print "Right!"
+            else:
+                print "Wrong!"
