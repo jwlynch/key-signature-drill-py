@@ -6,9 +6,14 @@ lop = True
 
 while lop:
     q = KeySigQuestion()
-    goodBool = q.ask()
     
-    if goodBool:
-      print "Right!"
-    else:
-      print "Wrong!"
+    try:
+        goodBool = q.ask()
+    except KeyboardInterrupt:
+        # maybe print stats here
+        break
+    finally:
+        if goodBool:
+            print "Right!"
+        else:
+            print "Wrong!"
