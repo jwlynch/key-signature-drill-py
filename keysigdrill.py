@@ -13,6 +13,7 @@ while lop:
     except KeyboardInterrupt:
         # maybe print stats here
         lop = False
+        print
     finally:
         if lop:
             if goodBool:
