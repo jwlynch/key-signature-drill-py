@@ -66,7 +66,7 @@ class Key(object):
      
     def __init__(self, aKey=None):
       if aKey is None:
-        self.key = self._assemble_key(random.choice(self.thekeys.keys()))
+        self.key = self._assemble_key(random.choice(list(self.thekeys.keys())))
       elif aKey in self.thekeys.keys():
         self.key = self._assemble_key(aKey)
 
