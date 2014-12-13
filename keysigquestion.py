@@ -1,6 +1,13 @@
 import random
 from key import Key
 
+PY2 = (str is bytes)
+
+if PY2:
+    my_input = raw_input
+else:
+    my_input = input
+
 class KeySigQuestion(object):
     def __init__(self):
         self.itsKey = Key()
@@ -14,21 +21,21 @@ class KeySigQuestion(object):
 
     def givenKeyGiveAccidentals(self):
         q = "What's the key signature of " + self.itsKey.key[0] + "? "
-        a = raw_input(q).strip()
+        a = my_input(q).strip()
         result = (a == self.itsKey._text_answer())
         
         return result
     
     def givenSignatureGiveKey(self):
         q = "What key has " + self.itsKey._text_answer() + "? "
-        a = raw_input(q).strip()
+        a = my_input(q).strip()
         result = (a == self.itsKey.key[0])
         
         return result
 
     def givenAccidentalsGiveKey(self):
         q = "What key has " + ", ".join(self.itsKey.accidentals()) + "? "
-        a = raw_input(q).strip()
+        a = my_input(q).strip()
         result = (a == self.itsKey.key[0])
         
         return result
