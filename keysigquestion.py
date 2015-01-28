@@ -9,8 +9,13 @@ else:
     my_input = input
 
 class KeySigQuestion(object):
-    def __init__(self):
-        self.itsKey = Key()
+    def __init__(self, aKey=None):
+        if aKey is None:
+            self.itsKey = Key()
+        else:
+            self.itsKey = Key(aKey)
+
+        self.majorKeyName = self.itsKey.key[0]
 
     def ask(self):
         choice = []
@@ -20,7 +25,7 @@ class KeySigQuestion(object):
         return random.choice(choice)()
 
     def givenKeyGiveAccidentals(self):
-        q = "What's the key signature of " + self.itsKey.key[0] + "? "
+        q = "What's the key signature of " + self.majorKeyName + "? "
         a = my_input(q).strip()
         result = (a == self.itsKey._text_answer())
         
@@ -29,13 +34,13 @@ class KeySigQuestion(object):
     def givenSignatureGiveKey(self):
         q = "What key has " + self.itsKey._text_answer() + "? "
         a = my_input(q).strip()
-        result = (a == self.itsKey.key[0])
+        result = (a == self.majorKeyName)
         
         return result
 
     def givenAccidentalsGiveKey(self):
         q = "What key has " + ", ".join(self.itsKey.accidentals()) + "? "
         a = my_input(q).strip()
-        result = (a == self.itsKey.key[0])
+        result = (a == self.majorKeyName)
         
         return result
