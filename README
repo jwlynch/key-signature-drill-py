@@ -1,3 +1,11 @@
 This is a simple key signature drill so people can learn theirs. You can
 start it with python keysigdrill.py and it will run forever. Presently
 textbased, it's easily ported to pyqt, pygtk, django.
+
+To run the tests, use
+
+  python -m unittest discover
+
+or
+
+  python3 -m unittest discover
