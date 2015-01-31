@@ -27,12 +27,12 @@ class KeySigQuestion(object):
     def givenKeyGiveAccidentals(self):
         q = "What's the key signature of " + self.majorKeyName + "? "
         a = my_input(q).strip()
-        result = (a == self.itsKey._text_answer())
+        result = (a == self.itsKey.textual_key_signature())
         
         return result
     
     def givenSignatureGiveKey(self):
-        q = "What key has " + self.itsKey._text_answer() + "? "
+        q = "What key has " + self.itsKey.textual_key_signature() + "? "
         a = my_input(q).strip()
         result = (a == self.majorKeyName)
         
