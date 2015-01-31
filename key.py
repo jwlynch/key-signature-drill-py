@@ -33,7 +33,7 @@ class Key(object):
       
       return result
     
-    def _text_answer(self):
+    def textual_key_signature(self):
       theKey = self.key[1]
       if theKey[0] == 0:
         result = theKey[1]

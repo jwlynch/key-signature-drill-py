@@ -24,7 +24,7 @@ class TestKey(unittest.TestCase):
         key_txt_list.append(['G', '1 sharp'])
         
         for key_txt in key_txt_list:
-            self.assertEqual(Key(key_txt[0])._text_answer(), key_txt[1])
+            self.assertEqual(Key(key_txt[0]).textual_key_signature(), key_txt[1])
 
     def testAccidentals(self):
         sharps = ['F#', 'C#', 'G#', 'D#', 'A#', 'E#', 'B#']
