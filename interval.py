@@ -54,6 +54,17 @@ class Interval(object):
             else:
                 self.its_type = self.modal_types[two]
 
+    intervals_str = \
+    [
+        "unison or octave",
+        "second or ninth",
+        "third or tenth",
+        "fourth or eleventh",
+        "fifth or twelvth",
+        "sixth or thirteenth",
+        "seventh"
+    ]
+
 I = Interval
 
 intervals_list = \
