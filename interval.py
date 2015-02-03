@@ -36,14 +36,18 @@ class Interval(object):
 
     def __init__(self, one, two, three=None):
         if three is None:
-            low_note, high_note = one, two
-
-            # TESTING:
-            self.low_note, self.high_note = one, two
+            # get letter names and accidental offsets from upper and lower notes
+            low_note, high_note = self.split_note(one), self.split_note(two)
 
             # get basic interval from table
-            # apply offsets from accidentals
+            basic_interval = self.the_basic_intervals[ (low_note[0], high_note[0]) ]
+
             # overall. set its_interval. its_type and its_tonal_flag
+            # first, apply offsets from accidentals
+            self.its_type = basic_interval.its_type - low_note[1] + high_note[1]
+            # set the interval and tonal flag
+            self.its_interval = basic_interval.its_interval
+            self.its_tonal_flag = basic_interval.its_tonal_flag
         else:
             self.its_interval = one
 
