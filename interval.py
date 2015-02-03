@@ -1,5 +1,37 @@
 class Interval(object):
-    
+    # two ways to call constructor:
+    #
+    # Interval(low_note, high_note) returns interval between
+    #
+    # Interval(its_interval, its_type, its_tonal_flag)
+
+    tonal_types = \
+    {
+        "qu.d": -4,
+        "tri.d": -3,
+        "do.d": -2,
+        "d": -1,
+        "p": 0,
+        "a": 1,
+        "do.a": 2,
+        "tr.a": 3,
+        "qu.a": 4
+    }
+
+    modal_types = \
+    {
+        "qu.d": -5,
+        "tri.d": -4,
+        "do.d": -3,
+        "d": -2,
+        "mi": -1,
+        "Ma": 0,
+        "a": 1,
+        "do.a": 2,
+        "tr.a": 3,
+        "qu.a": 4
+    }
+
     def __init__(self, one, two, three=None):
         if three is None:
             low_note, high_note = one, two
