@@ -43,5 +43,12 @@ class Interval(object):
             # apply offsets from accidentals
             # overall. set its_interval. its_type and its_tonal_flag
         else:
-            self.its_interval, self.its_type, self.its_tonal_flag = one, two, three
+            self.its_interval = one
+
+            self.its_tonal_flag = three
+
+            if self.its_tonal_flag:
+                self.its_type = self.tonal_types[two]
+            else:
+                self.its_type = self.modal_types[two]
 
