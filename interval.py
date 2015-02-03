@@ -80,10 +80,10 @@ class Interval(object):
 
     tonal_types_str = \
     [
-        "quadruply dimished",
-        "triply dimished",
-        "doubly dimished",
-        "dimished",
+        "quadruply diminished",
+        "triply diminished",
+        "doubly diminished",
+        "diminished",
         "perfect",
         "augmented",
         "doubly augmented",
@@ -93,10 +93,10 @@ class Interval(object):
 
     modal_types_str = \
     [
-        "quadruply dimished",
-        "triply dimished",
-        "doubly dimished",
-        "dimished",
+        "quadruply diminished",
+        "triply diminished",
+        "doubly diminished",
+        "diminished",
         "minor",
         "major",
         "augmented",
