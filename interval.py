@@ -119,7 +119,7 @@ class Interval(object):
 
         # note, a regex for doing the same as above is r'([A-G])(?:bb|b|x|#)'
 
-        return [letter, accidental_modifiers[accidental]]
+        return [letter, self.accidental_modifiers[accidental]]
 
 I = Interval
 
