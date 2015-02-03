@@ -65,6 +65,33 @@ class Interval(object):
         "seventh"
     ]
 
+    tonal_types_str = \
+    [
+        "quadruply dimished",
+        "triply dimished",
+        "doubly dimished",
+        "dimished",
+        "perfect",
+        "augmented",
+        "doubly augmented",
+        "triply augmented",
+        "quadruply augmented",
+    ]
+
+    modal_types_str = \
+    [
+        "quadruply dimished",
+        "triply dimished",
+        "doubly dimished",
+        "dimished",
+        "minor",
+        "major",
+        "augmented",
+        "doubly augmented",
+        "triply augmented",
+        "quadruply augmented",
+    ]
+
 I = Interval
 
 intervals_list = \
