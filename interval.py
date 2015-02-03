@@ -5,6 +5,8 @@ class Interval(object):
     #
     # Interval(its_interval, its_type, its_tonal_flag)
 
+    the_basic_intervals = {}
+
     tonal_types = \
     {
         "qu.d": -4,
