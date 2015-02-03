@@ -36,6 +36,8 @@ class Interval(object):
 
     def __init__(self, one, two, three=None):
         if three is None:
+            # Two parameters: low note string, high note string
+
             # get letter names and accidental offsets from upper and lower notes
             low_note, high_note = self.split_note(one), self.split_note(two)
 
@@ -49,6 +51,13 @@ class Interval(object):
             self.its_interval = basic_interval.its_interval
             self.its_tonal_flag = basic_interval.its_tonal_flag
         else:
+            # Three parameters:
+            #         interval number -- like 4 as in fourth,
+            #         interval type, like perfect, and
+            #         tonal flag,
+            #            true if could be perfect, or
+            #            false if could be major or minor
+
             self.its_interval = one
 
             self.its_tonal_flag = three
