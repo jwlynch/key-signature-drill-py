@@ -67,3 +67,9 @@ intervals_list = \
     I(2, "Mi", False), I(3, "Mi", False), I(4, "p", True), I(5, "d", True), I(6, "Mi", False), I(7, "Mi", False), I(1, "p", True), 
 ]
 
+# idea for generating the keys, observe the output of [(x,y) for x in range(5) for y in ["a", "b"]]
+
+letter_list = ["C", "D", "E", "F", "G", "A", "B"]
+
+keys_list = [(x,y) for x in letter_list for y in letter_list]
+
