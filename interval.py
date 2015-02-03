@@ -104,6 +104,23 @@ class Interval(object):
 
         return result
 
+    accidental_modifiers = \
+    {
+        'bb': -2,
+        'b': -1,
+        '': 0,
+        '#': 1,
+        'x': 2
+    }
+
+    def split_note(self, note_str):
+        letter = note_str[0]
+        accidental = note_str[1:]
+
+        # note, a regex for doing the same as above is r'([A-G])(?:bb|b|x|#)'
+
+        return [letter, accidental_modifiers[accidental]]
+
 I = Interval
 
 intervals_list = \
