@@ -56,3 +56,14 @@ class Interval(object):
 
 I = Interval
 
+intervals_list = \
+[
+    I(1, "p", True), I(2, "Ma", False), I(3, "Mi", False), I(4, "p", True), I(5, "p", True), I(6, "Ma", False), I(7, "Ma", False),
+    I(7, "Mi", False), I(1, "p", True), I(2, "Ma", False), I(3, "Mi", False), I(4, "p", True), I(5, "p", True), I(6, "Ma", False),
+    I(6, "Mi", False), I(7, "Mi", False), I(1, "p", True), I(2, "Mi", False), I(3, "Mi", False), I(4, "p", True), I(5, "p", True), 
+    I(5, "p", True), I(6, "Ma", False), I(7, "Ma", False), I(1, "p", True), I(2, "Ma", False), I(3, "Ma", False), I(4, "a", True), 
+    I(4, "p", True), I(5, "p", True), I(6, "Ma", False), I(7, "Mi", False), I(1, "p", True), I(2, "Ma", False), I(3, "Ma", False),
+    I(3, "Mi", False), I(4, "p", True), I(5, "p", True), I(6, "Mi", False), I(7, "Mi", False), I(1, "p", True), I(2, "Ma", False), 
+    I(2, "Mi", False), I(3, "Mi", False), I(4, "p", True), I(5, "d", True), I(6, "Mi", False), I(7, "Mi", False), I(1, "p", True), 
+]
+
