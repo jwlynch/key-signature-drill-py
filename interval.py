@@ -92,6 +92,18 @@ class Interval(object):
         "quadruply augmented",
     ]
 
+    def __str__(self):
+        if self.its_tonal_flag:
+            result = self.tonal_types_str[self.its_type + 4]
+        else:
+            result = self.modal_types_str[self.its_type + 5]
+
+        result += " "
+
+        result += self.intervals_str[self.its_interval - 1]
+
+        return result
+
 I = Interval
 
 intervals_list = \
