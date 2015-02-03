@@ -54,3 +54,5 @@ class Interval(object):
             else:
                 self.its_type = self.modal_types[two]
 
+I = Interval
+
