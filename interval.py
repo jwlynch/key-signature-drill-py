@@ -73,3 +73,5 @@ letter_list = ["C", "D", "E", "F", "G", "A", "B"]
 
 keys_list = [(x,y) for x in letter_list for y in letter_list]
 
+# now set class var
+Interval.the_basic_intervals = dict(zip(keys_list, intervals_list))
