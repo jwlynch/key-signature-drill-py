@@ -1,50 +1,31 @@
 import unittest
-from key import Key
+from interval import Interval
 
-class TestKey(unittest.TestCase):
+class TestInterval(unittest.TestCase):
     
-    def testKeyTextAnswer(self):
-        key_txt_list = []
-        key_txt_list.append(['C#', '7 sharps'])
-        key_txt_list.append(['F#', '6 sharps'])
-        key_txt_list.append(['B', '5 sharps'])
-        key_txt_list.append(['E', '4 sharps'])
-        key_txt_list.append(['A', '3 sharps'])
-        key_txt_list.append(['D', '2 sharps'])
-        
-        key_txt_list.append(['Cb', '7 flats'])
-        key_txt_list.append(['Gb', '6 flats'])
-        key_txt_list.append(['Db', '5 flats'])
-        key_txt_list.append(['Ab', '4 flats'])
-        key_txt_list.append(['Eb', '3 flats'])
-        key_txt_list.append(['Bb', '2 flats'])
-        
-        key_txt_list.append(['F', '1 flat'])
-        key_txt_list.append(['C', 'no sharps or flats'])
-        key_txt_list.append(['G', '1 sharp'])
-        
-        for key_txt in key_txt_list:
-            self.assertEqual(Key(key_txt[0]).textual_key_signature(), key_txt[1])
+    def testSomeIntervals(self):
+        mi_2 = Interval(2, "mi", False)
+        ma_2 = Interval(2, "Ma", False)
+        mi_3 = Interval(3, "mi", False)
+        ma_3 = Interval(3, "Ma", False)
+        mi_6 = Interval(6, "mi", False)
+        ma_6 = Interval(6, "Ma", False)
+        mi_7 = Interval(7, "mi", False)
+        ma_7 = Interval(7, "Ma", False)
 
-    def testAccidentals(self):
-        sharps = ['F#', 'C#', 'G#', 'D#', 'A#', 'E#', 'B#']
-        flats = ['Bb', 'Eb', 'Ab', 'Db', 'Gb', 'Cb', 'Fb']
-        sharp_keys = ['C#', 'F#', 'B', 'E', 'A', 'D', 'G']
-        flat_keys = ['Cb', 'Gb', 'Db', 'Ab', 'Eb', 'Bb', 'F']
-        
-        key_acc_list = []
-        
-        for i in range(1, 7):
-            key_acc_list.append([sharp_keys[i], sharps[:-i]])
-            key_acc_list.append([flat_keys[i], flats[:-i]])
-        
-        key_acc_list.append(['C#', sharps])
-        key_acc_list.append(['Cb', flats])
-        
-        key_acc_list.append(['C', []])
-        
-        for key_acc in key_acc_list:
-            self.assertEqual(Key(key_acc[0]).accidentals(), key_acc[1])
+        p_4 = Interval(4, "p", True)
+        a_4 = Interval(4, "a", True)
+        p_5 = Interval(5, "p", True)
+        d_5 = Interval(5, "d", True)
+
+        self.assertEqual(str(mi_2), "minor second or ninth")
+        self.assertEqual(str(ma_2), "major second or ninth")
+        self.assertEqual(str(mi_3), "minor third or tenth")
+        self.assertEqual(str(ma_3), "major third or tenth")
+        self.assertEqual(str(mi_6), "minor sixth or thirteenth")
+        self.assertEqual(str(ma_6), "major sixth or thirteenth")
+        self.assertEqual(str(mi_7), "minor seventh")
+        self.assertEqual(str(ma_7), "major seventh")
 
 if __name__ == '__main__':
     unittest.main()
