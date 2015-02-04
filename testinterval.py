@@ -28,5 +28,11 @@ class TestInterval(unittest.TestCase):
         self.assertEqual(str(mi_7), "minor seventh")
         self.assertEqual(str(ma_7), "major seventh")
 
+        self.assertEqual(str(p_1), "perfect unison or octave")
+        self.assertEqual(str(p_4), "perfect fourth or eleventh")
+        self.assertEqual(str(a_4), "augmented fourth or eleventh")
+        self.assertEqual(str(p_5), "perfect fifth or twelvth")
+        self.assertEqual(str(d_5), "diminished fifth or twelvth")
+
 if __name__ == '__main__':
     unittest.main()
