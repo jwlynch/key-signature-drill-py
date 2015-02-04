@@ -13,6 +13,7 @@ class TestInterval(unittest.TestCase):
         mi_7 = Interval(7, "mi", False)
         ma_7 = Interval(7, "Ma", False)
 
+        p_1 = Interval(1, "p", True)
         p_4 = Interval(4, "p", True)
         a_4 = Interval(4, "a", True)
         p_5 = Interval(5, "p", True)
