@@ -156,7 +156,7 @@ I = Interval
 
 intervals_list = \
 [
-    I(1, "p", True), I(2, "Ma", False), I(3, "mi", False), I(4, "p", True), I(5, "p", True), I(6, "Ma", False), I(7, "Ma", False),
+    I(1, "p", True), I(2, "Ma", False), I(3, "Ma", False), I(4, "p", True), I(5, "p", True), I(6, "Ma", False), I(7, "Ma", False),
     I(7, "mi", False), I(1, "p", True), I(2, "Ma", False), I(3, "mi", False), I(4, "p", True), I(5, "p", True), I(6, "Ma", False),
     I(6, "mi", False), I(7, "mi", False), I(1, "p", True), I(2, "mi", False), I(3, "mi", False), I(4, "p", True), I(5, "p", True),
     I(5, "p", True), I(6, "Ma", False), I(7, "Ma", False), I(1, "p", True), I(2, "Ma", False), I(3, "Ma", False), I(4, "a", True), 
