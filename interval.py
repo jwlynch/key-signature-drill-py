@@ -67,6 +67,24 @@ class Interval(object):
             else:
                 self.its_type = self.modal_types[two]
 
+    def __eq__(self, other):
+        result = False
+
+        if self.its_interval == other.its_interval:
+            if self.its_tonal_flag == other.its_tonal_flag:
+                if self.its_type == other.its_type:
+                    result = True
+
+        return result
+
+    def __ne__(self, other):
+        result = True
+
+        if self == other:
+            result = False
+
+        return result
+
     intervals_str = \
     [
         "unison or octave",
