@@ -135,6 +135,9 @@ class Interval(object):
 
         return result
 
+    def __repr__(self):
+        return str(self)
+
     accidental_modifiers = \
     {
         'bb': -2,
