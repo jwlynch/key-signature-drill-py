@@ -25,22 +25,25 @@ class KeySigQuestion(object):
         return random.choice(choice)()
 
     def givenKeyGiveAccidentals(self):
-        q = "What's the key signature of " + self.majorKeyName + "? "
-        a = my_input(q).strip()
-        result = (a == self.itsKey.textual_key_signature())
+        self.q = "What's the key signature of " + self.majorKeyName + "? "
+        self.correctAns = self.itsKey.textual_key_signature()
+        self.a = my_input(self.q).strip()
+        result = (self.a == self.correctAns)
         
         return result
     
     def givenSignatureGiveKey(self):
-        q = "What key has " + self.itsKey.textual_key_signature() + "? "
-        a = my_input(q).strip()
-        result = (a == self.majorKeyName)
+        self.q = "What key has " + self.itsKey.textual_key_signature() + "? "
+        self.correctAns = self.majorKeyName
+        self.a = my_input(self.q).strip()
+        result = (self.a == self.correctAns)
         
         return result
 
     def givenAccidentalsGiveKey(self):
-        q = "What key has " + ", ".join(self.itsKey.accidentals()) + "? "
-        a = my_input(q).strip()
-        result = (a == self.majorKeyName)
+        self.q = "What key has " + ", ".join(self.itsKey.accidentals()) + "? "
+        self.correctAns = self.majorKeyName
+        self.a = my_input(self.q).strip()
+        result = (self.a == self.correctAns)
         
         return result
