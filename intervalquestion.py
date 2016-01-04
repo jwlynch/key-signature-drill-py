@@ -1,5 +1,5 @@
 import random
-from key import Key
+from interval import Interval
 
 PY2 = (str is bytes)
 
