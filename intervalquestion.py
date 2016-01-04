@@ -25,23 +25,20 @@ class IntervalQuestion(object):
         choice.append(self.givenAccidentalsGiveKey)
         return random.choice(choice)()
 
-    def givenKeyGiveAccidentals(self):
-        q = "What's the key signature of " + self.majorKeyName + "? "
         a = my_input(q).strip()
-        result = (a == self.itsKey.textual_key_signature())
         
         return result
     
-    def givenSignatureGiveKey(self):
-        q = "What key has " + self.itsKey.textual_key_signature() + "? "
-        a = my_input(q).strip()
-        result = (a == self.majorKeyName)
-        
-        return result
+#    def givenSignatureGiveKey(self):
+#        q = "What key has " + self.itsKey.textual_key_signature() + "? "
+#        a = my_input(q).strip()
+#        result = (a == self.majorKeyName)
+#        
+#        return result
 
-    def givenAccidentalsGiveKey(self):
-        q = "What key has " + ", ".join(self.itsKey.accidentals()) + "? "
-        a = my_input(q).strip()
-        result = (a == self.majorKeyName)
-        
-        return result
+#    def givenAccidentalsGiveKey(self):
+#        q = "What key has " + ", ".join(self.itsKey.accidentals()) + "? "
+#        a = my_input(q).strip()
+#        result = (a == self.majorKeyName)
+#        
+#        return result
