@@ -12,13 +12,11 @@ else:
     my_input = input
 
 class IntervalQuestion(object):
-    def __init__(self, aKey=None, aChro=None, aLoNote=None):
-        if aKey is None:
-            self.itsKey = Key()
-        else:
-            self.itsKey = Key(aKey)
-
-        self.majorKeyName = self.itsKey.key[0]
+    def __init__(self):
+        scale = random.choice(majScalesList)
+        self.highNote  = random.choice(scale)
+        self.lowNote = random.choice(scale)
+        self.interval = Interval(self.lowNote, self.highNote)
 
     def ask(self):
         choice = []
