@@ -20,12 +20,14 @@ class IntervalQuestion(object):
 
     def ask(self):
         choice = []
-        choice.append(self.givenKeyGiveAccidentals)
-        choice.append(self.givenSignatureGiveKey)
-        choice.append(self.givenAccidentalsGiveKey)
+        choice.append(self.givenLowNoteAndIntervalGiveHighNote)
         return random.choice(choice)()
 
+    def givenLowNoteAndIntervalGiveHighNote(self):
+        q = "What note is a {0} above {1}? ".format(self.interval, self.lowNote)
         a = my_input(q).strip()
+        result = (a == self.highNote)
+        self.correctAns = self.highNote
         
         return result
     
