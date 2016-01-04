@@ -1,6 +1,8 @@
-This is a simple key signature drill so people can learn theirs. You can
-start it with python keysigdrill.py and it will run forever. Presently
-textbased, it's easily ported to pyqt, pygtk, django.
+These are two simple music theory drills so people can oractuce. You can
+start the key signature drill with python keysigdrill.py; the other drill
+is an interval drill, which you can start with python intervaldrill.py, and
+either will run forever. Presently textbased, it's easily ported to pyqt,
+pygtk, django.
 
 To run the tests, use
 
