@@ -31,16 +31,3 @@ class IntervalQuestion(object):
         
         return result
     
-#    def givenSignatureGiveKey(self):
-#        q = "What key has " + self.itsKey.textual_key_signature() + "? "
-#        a = my_input(q).strip()
-#        result = (a == self.majorKeyName)
-#        
-#        return result
-
-#    def givenAccidentalsGiveKey(self):
-#        q = "What key has " + ", ".join(self.itsKey.accidentals()) + "? "
-#        a = my_input(q).strip()
-#        result = (a == self.majorKeyName)
-#        
-#        return result
