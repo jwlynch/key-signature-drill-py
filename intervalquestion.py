@@ -1,7 +1,10 @@
 import random
+from majScales import majScales
 from interval import Interval
 
 PY2 = (str is bytes)
+
+majScalesList = majScales()
 
 if PY2:
     my_input = raw_input
