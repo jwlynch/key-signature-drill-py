@@ -8,7 +8,7 @@ try:
         if q.ask():
             print ("Right!")
         else:
-            print ("Wrong! the correct answer was {0}".format{q.correctAns})
+            print ("Wrong! the correct answer was {0}".format(q.correctAns))
 except KeyboardInterrupt:
     # maybe print stats here
     print()
