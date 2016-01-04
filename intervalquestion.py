@@ -21,6 +21,7 @@ class IntervalQuestion(object):
     def ask(self):
         choice = []
         choice.append(self.givenLowNoteAndIntervalGiveHighNote)
+        choice.append(self.givenIntervalAndHighNoteGiveLowNote)
         return random.choice(choice)()
 
     def givenLowNoteAndIntervalGiveHighNote(self):
@@ -31,3 +32,10 @@ class IntervalQuestion(object):
         
         return result
     
+    def givenIntervalAndHighNoteGiveLowNote(self):
+        q = "What note is below {1} by {0}? ".format(self.interval, self.highNote)
+        a = my_input(q).strip()
+        result = (a == self.lowNote)
+        self.correctAns = self.lowNote
+
+        return result
