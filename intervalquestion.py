@@ -8,8 +8,8 @@ if PY2:
 else:
     my_input = input
 
-class KeySigQuestion(object):
-    def __init__(self, aKey=None):
+class IntervalQuestion(object):
+    def __init__(self, aKey=None, aChro=None, aLoNote=None):
         if aKey is None:
             self.itsKey = Key()
         else:
